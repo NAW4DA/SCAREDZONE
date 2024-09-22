@@ -3,10 +3,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const audioPlayer = document.getElementById('audio-player');
     
     const memberInfoData = {
-        'NAW4DA': { 'name': 'NAWADA', 'image': './assests/NAWADA.png', 'description': 'tattooed in reverse', 'track': './assests/21savage.mp3' },
-        'HADARI': { 'name': 'HADARI', 'image': './assests/hadari.png', 'description': 'TYPESCRIPT/JAVASCRIPT, KALI LINUX KILLER.', 'track': './assests/HADARI.mp3' },
-        'DFGEAK': { 'name': 'DFGEAK', 'image': './assests/DANILO.png', 'description': 'PYTHON KILLER. FAME.', 'track': './assests/DFGEAK.mp3'}
-    };
+        'NAW4DA': { 
+            'name': 'NAWADA', 
+            'image': './assets/NAWADA.png', 
+            'description': 'tattooed in reverse | love atori <span style="color: red;">❤</span>', 
+            'track': './assets/21savage.mp3' 
+        },
+        'HADARI': { 
+            'name': 'HADARI', 
+            'image': './assets/hadari.png', 
+            'description': 'TYPESCRIPT/JAVASCRIPT, KALI LINUX KILLER.', 
+            'track': './assets/HADARI.mp3' 
+        },
+        'DFGEAK': { 
+            'name': 'DFGEAK', 
+            'image': './assets/DANILO.png', 
+            'description': 'PYTHON KILLER. FAME.', 
+            'track': './assets/DFGEAK.mp3'
+        },
+        'KATANTIKA': {
+            'name': 'ATORI', 
+            'image': './assets/meow.png', 
+            'description': 'love nawada <span style="color: red;">❤</span>', 
+            'track': './assets/meow.mp3'
+        }
+    };    
     
     function showMember(member) {
         const info = memberInfoData[member];
