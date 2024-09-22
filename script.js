@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function resetMusic() {
-        if (audioPlayer.src !== './assests/NAWADAMENU.mp3') {
-            audioPlayer.src = './assests/NAWADAMENU.mp3';
+        if (audioPlayer.src !== './assets/NAWADAMENU.mp3') {
+            audioPlayer.src = './assets/NAWADAMENU.mp3';
             audioPlayer.play();
         }
     }
