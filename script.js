@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentMember = null;
     const audioPlayer = document.getElementById('audio-player');
+    let nawadaTrack = './assests/21savage.mp3'; 
+    
     const memberInfoData = {
         'NAW4DA': { 'name': 'NAWADA', 'image': './assests/NAWADA.png', 'description': 'tattooed in reverse' },
     };
+    
     function showMember(member) {
         const info = memberInfoData[member];
         if (!info) return;
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentMember === selectedElement) {
             currentMember = null;
             memberDiv.innerHTML = '';
+            resetMusic();
             return;
         }
         if (selectedElement) {
@@ -39,16 +43,37 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="glitch" style="margin-top: 5px;">${info.description}</p>
         `;
         currentMember = selectedElement;
+        playNawadaMusic();
     }
+
+    function playNawadaMusic() {
+        if (audioPlayer.src !== nawadaTrack) {
+            audioPlayer.src = nawadaTrack;
+            audioPlayer.play();
+        }
+    }
+
+    function resetMusic() {
+        if (audioPlayer.src !== './assests/NAWADAMENU.mp3') {
+            audioPlayer.src = './assests/NAWADAMENU.mp3';
+            audioPlayer.play();
+        }
+    }
+
     function removeOverlay() {
         const overlay = document.getElementById('overlay');
         if (overlay) {
             overlay.style.display = 'none';
         }
-        if (audioPlayer) {
-            audioPlayer.play();
-        }
+        resetMusic();
     }
+
     window.removeOverlay = removeOverlay;
     window.showMember = showMember;
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            resetMusic(); 
+        }
+    });
 });
