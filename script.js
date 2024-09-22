@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentMember = null;
     const audioPlayer = document.getElementById('audio-player');
-    let nawadaTrack = './assests/21savage.mp3'; 
     
     const memberInfoData = {
-        'NAW4DA': { 'name': 'NAWADA', 'image': './assests/NAWADA.png', 'description': 'tattooed in reverse' },
+        'NAW4DA': { 'name': 'NAWADA', 'image': './assests/NAWADA.png', 'description': 'tattooed in reverse', 'track': './assests/21savage.mp3' },
+        'HADARI': { 'name': 'HADARI', 'image': './assests/hadari.png', 'description': 'TYPESCRIPT/JAVASCRIPT, KALI LINUX KILLER.', 'track': './assests/HADARI.mp3' },
+        'DFGEAK': { 'name': 'DFGEAK', 'image': './assests/DANILO.png', 'description': 'PYTHON KILLER. FAME.', 'track': './assests/DFGEAK.mp3'}
     };
     
     function showMember(member) {
@@ -43,12 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="glitch" style="margin-top: 5px;">${info.description}</p>
         `;
         currentMember = selectedElement;
-        playNawadaMusic();
+        playMemberMusic(info.track);
     }
 
-    function playNawadaMusic() {
-        if (audioPlayer.src !== nawadaTrack) {
-            audioPlayer.src = nawadaTrack;
+    function playMemberMusic(track) {
+        if (audioPlayer.src !== track) {
+            audioPlayer.src = track;
             audioPlayer.play();
         }
     }
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            resetMusic(); 
+            resetMusic();
         }
     });
 });
