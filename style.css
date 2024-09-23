@@ -224,6 +224,20 @@ pre {
     font-size: 20px;
 }
 
+.ascii-logo {
+  color: var(--red); /* Цвет логотипа */
+  text-align: center;
+  font-family: monospace; /* Обеспечение корректного отображения ASCII */
+  font-size: 14px; /* Настройка размера текста */
+  line-height: 1.2; /* Межстрочный интервал для лучшего вида */
+  margin: 20px auto; /* Центрирование на странице */
+  animation: flicker1 7s infinite; /* Анимация мигания текста */
+  display: flex;
+  position: relative;
+  left: -30px;
+}
+
+
 @font-face {
     font-family: TopazPlus;
     src: url("./assets/TopazPlus.ttf");
@@ -352,6 +366,15 @@ From here */
     #text p {
         font-size: 12px
     }
+        .pale-red span{
+      width: 900px;
+    }
+    .pale-red span{
+      width: 900px;
+    }
+    .ascii-logo {
+      font-size: 12px; /* Уменьшение размера логотипа на маленьких экранах */
+  }
 }
 
 @media screen and (max-width: 411px) {
@@ -368,18 +391,22 @@ From here */
     #text p {
         font-size: 10px
     }
+    .ascii-logo {
+      font-size: 10px; /* Еще меньше для самых маленьких экранов */
+  }
 }
-  #controls {
+#controls {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
     padding: 10px 0;
     margin-bottom: -30px;
-        }
-        #songTitle {
-            font-size: 18px;
-             margin: 0 auto;
-            font-family: 'TopazPlus', Arial, sans-serif;
-            color: var(--red)
-        }
+}
+#songTitle {
+  font-size: 18px;
+  margin: 0 auto;
+  font-family: 'TopazPlus', Arial, sans-serif;
+  color: var(--red)
+}
+
