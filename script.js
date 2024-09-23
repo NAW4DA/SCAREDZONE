@@ -92,10 +92,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.removeOverlay = removeOverlay;
     window.showMember = showMember;
-
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            resetMusic();
-        }
-    });
 });
