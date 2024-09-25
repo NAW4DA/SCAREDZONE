@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentMember = null;
     const audioPlayer = document.getElementById('audio-player');
-    
+    const donateInfo = document.getElementById('donation-info');
+
     const memberInfoData = {
         'NAW4DA': { 
             'name': 'NAWADA', 
             'image': './assets/NAWADA.png', 
-            'description': 'tattooed in reverse | love atori <span style="color: red;">❤</span>', 
-            'track': './assets/21savage.mp3' 
+            'description': 'tattooed in reverse | <span style="color: red;">atori ❤</span>', 
+            'track': './assets/NAWADA.mp3' 
         },
         'HADARI': { 
             'name': 'HADARI', 
@@ -24,48 +25,50 @@ document.addEventListener('DOMContentLoaded', function() {
         'KATANTIKA': {
             'name': 'ATORI', 
             'image': './assets/meow.png', 
-            'description': 'love nawada <span style="color: red;">❤</span>', 
+            'description': 'DESIGN KILLER! <span style="color: red;">nawada lox ❤</span>', 
             'track': './assets/meow.mp3'
         }
     };    
-    
+
     function showMember(member) {
         const info = memberInfoData[member];
-        if (!info) return;
         const memberDiv = document.getElementById('member-info');
         const selectedElement = document.querySelector(`[onclick="showMember('${member}')"]`);
+
+        if (!info) return;
+
         if (currentMember) {
             currentMember.classList.remove('selected');
-            const previousDot = document.getElementById(`${currentMember.getAttribute('data-member')}-dot`);
-            if (previousDot) previousDot.innerHTML = '::';
+            resetDot(currentMember.getAttribute('data-member'));
         }
+
         if (currentMember === selectedElement) {
             currentMember = null;
             memberDiv.innerHTML = '';
             resetMusic();
+            donateInfo.style.display = 'block';
             return;
         }
+
         if (selectedElement) {
             selectedElement.classList.add('selected');
             selectedElement.setAttribute('data-member', member);
+            currentMember = selectedElement;
         } else {
             return;
         }
-        document.querySelectorAll('.yellow').forEach(dot => {
-            dot.innerHTML = '::';
-        });
-        const currentDot = document.getElementById(`${member}-dot`);
-        if (currentDot) {
-            currentDot.innerHTML = '<span style="color: #8a0000; margin-top: -2px;">&bull;</span>';
-        }
+
+        updateDots(member);
+        
         memberDiv.innerHTML = `
             <img src="${info.image}" class="fade-in" style="height: 120px;" draggable="false">
             <p style="margin-top: 5px; margin-bottom: 0; color: #b90000;">[ ${info.name} ]</p>
             <hr style="border-top: 1px solid #b90000; margin: 3px 0;">
             <p class="glitch" style="margin-top: 5px;">${info.description}</p>
         `;
-        currentMember = selectedElement;
+        
         playMemberMusic(info.track);
+        donateInfo.style.display = 'none';
     }
 
     function playMemberMusic(track) {
@@ -76,8 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function resetMusic() {
-        if (audioPlayer.src !== './assets/NAWADAMENU.mp3') {
-            audioPlayer.src = './assets/NAWADAMENU.mp3';
+        const defaultTrack = './assets/NAWADAMENU.mp3';
+        if (audioPlayer.src !== defaultTrack) {
+            audioPlayer.src = defaultTrack;
             audioPlayer.play();
         }
     }
@@ -88,6 +92,21 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.style.display = 'none';
         }
         resetMusic();
+    }
+
+    function resetDot(memberId) {
+        const previousDot = document.getElementById(`${memberId}-dot`);
+        if (previousDot) previousDot.innerHTML = '::';
+    }
+
+    function updateDots(member) {
+        document.querySelectorAll('.yellow').forEach(dot => {
+            dot.innerHTML = '::';
+        });
+        const currentDot = document.getElementById(`${member}-dot`);
+        if (currentDot) {
+            currentDot.innerHTML = '<span style="color: #8a0000; margin-top: -2px;">&bull;</span>';
+        }
     }
 
     window.removeOverlay = removeOverlay;
