@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#f4b6e5" data-react-helmet="true">
     <title>[IV] Within Reach</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="theme-color" content="#f4b6e5" data-react-helmet="true">
 </head>
 <body>
     <div id="overlay" class="overlay" onclick="removeOverlay();">
         <p class="glitch" style="margin-top: 5px;">Click To Enter</p>
     </div>
-    <script src="script.js"></script>
+
+    <audio id="audio-player" src="./assets/NAWADAMENU.mp3" loop style="display: none;"></audio>
+
     <div class="blink" style="margin-bottom: -16px;">
         <pre class="ascii-logo">
             █████  ▄████▄   ▄▄▄       ██▀███  ▓█████ ▓█████▄ ▒███████▒ ▒█████   ███▄    █ ▓█████ 
@@ -19,14 +21,13 @@
            ▒   ██▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ▒██▀▀█▄  ▒▓█  ▄ ░▓█▄   ▌  ▄▀▒   ░▒██   ██░▓██▒  ▐▌██▒▒▓█  ▄ 
          ▒██████▒▒▒ ▓███▀ ░ ▓█   ▓██▒░██▓ ▒██▒░▒████▒░▒████▓ ▒███████▒░ ████▓▒░▒██░   ▓██░░▒████▒
          ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░░ ▒░ ░ ▒▒▓  ▒ ░▒▒ ▓░▒░▒░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░░ ▒░ ░
-         ░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░ ░ ░  ░ ░ ▒  ▒ ░░▒ ▒ ░ ▒  ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░
-         ░  ░  ░  ░          ░   ▒     ░░   ░    ░    ░ ░  ░ ░ ░ ░ ░ ░░ ░ ░ ▒     ░   ░ ░    ░   
-               ░  ░ ░            ░  ░   ░        ░  ░   ░      ░ ░        ░ ░           ░    ░  ░
-                  ░                                   ░      ░                                   
+         ░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░ ░ ░  ░ ░ ▒  ▒ ░░▒ ▒ ░ ▒  ░ ▒ ▒░ ░ ░░   ░ ▒░ ░ ░  ░ 
+         ░  ░  ░  ░          ░   ▒     ░░   ░    ░    ░ ░  ░ ░ ░ ░ ░░ ░ ░ ░ ▒     ░   ░ ░    ░    
+               ░  ░ ░            ░  ░   ░        ░  ░   ░      ░ ░        ░ ░           ░    ░  ░ 
+                  ░                                   ░      ░                                    
          </pre>
-         
     </div>
-    <audio id="audio-player" src="./assets/NAWADAMENU.mp3" loop style="display: none;"></audio>
+
     <div id="content">
         <span>
             <p class="pale-red">
@@ -34,8 +35,7 @@
                 <span class="red">
                     <span class="red flicker-text2">XXX</span>
                 </span>
-                <span class="pale-red">--------------------------<span class="red flicker-text1">I</span><span class="flicker-text1"><span class="red">V</span></span>--------------------------------------
-                </span>
+                <span class="pale-red">-------------------------- <span class="red flicker-text1">I</span><span class="flicker-text1"><span class="red">V</span></span> ------------------------------------</span>
             </p>
         </span>
         <div id="text">
@@ -45,7 +45,9 @@
                 <br>
                 <span class="yellow">::</span>
                 Look at my telegram channel with projects
-                <a href="https://t.me/nawadaprice" class="pale-red"><span class="__cf_email__" data-cfemail="4920273d2c2509203b26273f2c202567263b2e">[LINK TELEGRAM]</span></a> : If you need a website or bot, create an order <span class="blink2">Good luck user.</span>
+                <a href="https://t.me/nawadaprice" class="pale-red">
+                    <span class="__cf_email__" data-cfemail="4920273d2c2509203b26273f2c202567263b2e">[LINK TELEGRAM]</span>
+                </a>: If you need a website or bot, create an order. <span class="blink2">Good luck user.</span>
             </p>
         </div>
         <span>
@@ -54,8 +56,7 @@
                 <span class="red">
                     <span class="flicker-text">XXX</span>
                 </span>
-                <span class="pale-red">
-                    ------------------------<span class="red">M<span class="brightred">e</span>m<span class="flicker-text">b</span><span class="flicker-text1">ers</span></span>-----------------------------------</span>
+                <span class="pale-red">------------------------ <span class="red">M<span class="brightred">e</span>m<span class="flicker-text">b</span><span class="flicker-text1">ers</span></span> ---------------------------------</span>
             </p>
         </span>
         <div id="text">
@@ -84,8 +85,31 @@
                 <span class="purple">[<a href="#">NO LINKS!</a>]</span>
             </p>
         </div>
+        <span>
+        <div id="donation-info">
+            <p class="pale-red">
+                0----
+                <span class="red">
+                    <span class="red flicker-text2">XXX</span>
+                </span>
+                <span class="pale-red">------------------------ <span class="red flicker-text1">Don</span><span class="flicker-text1"><span class="red">ation</span></span> --------------------------------</span>
+            </p>
+                <div id="text">
+                    <p>
+                        <span class="yellow">::</span>
+                        <span class="atts">Donate to this project via Crypto Bot</span>
+                        <span class="purple">[</span><a href="t.me/send?start=IVZF5vyx3B6Z">t.me/@send</a><span class="purple">]</span>
+                    </p>
+                    <p>
+                        <span class="yellow">::</span>
+                        <span class="atts">Support this project on Github</span>
+                        <span class="purple">[</span><a href="https://github.com/naw4da/The-Scared-Zone">/github/scaredzone</a><span class="purple">]</span>
+                    </p>
+                </div>
+            </div>
+        </span>
         <div id="member-info" style="text-align: center; margin-top: 35px;"></div>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
