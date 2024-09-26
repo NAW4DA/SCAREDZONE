@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'image': './assets/meow.png', 
             'description': 'DESIGN KILLER! <span style="color: red;">nawada lox ❤</span>', 
             'track': './assets/meow.mp3'
+        },
+        'LOLYAA': {
+            'name': 'LOLYACHKA',
+            'image': './assets/paranoia.png',
+            'description': 'i wnt to sleep zzZ..',
+            'track': './assets/paranoia.mp3'
         }
     };    
 
