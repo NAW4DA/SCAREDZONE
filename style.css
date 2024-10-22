@@ -8,18 +8,17 @@
 */
 
 :root {
-	--pale-red: #ec8b8b;
-	--red: #b90000;
-	--yellow: #c3c3c3;
-	--purple: #ec8b8b;
+	--pale-red: #ffffff;
+	--red: #ffffff;
+	--yellow: #ffffff;
+	--purple: #ffffff;
 	--grey: #c3c3c3;
-	--atts: #914e4e;
+	--atts: #ffffff;
 	--hsted: #c3c3c3;
 
 	--background: #000;
 
-	--light-blue: #98F5FF;
-	--hover-blue: #8a0000;
+	--hover-blue: #ffffff;
 }
 
 body {
@@ -48,18 +47,18 @@ body {
     cursor: pointer;
     text-align: center;
     color: #ffffff; 
-    background-color: #b90000; 
+    background-color: #ffffff; 
     font-family: TopazPlus, sans-serif;
     padding: 10px 20px;
     border: none; 
     border-radius: 5px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s;
-	user-select: none;
+	  user-select: none;
 }
 
 .proceed-button:hover {
-    background-color: #a80000;
+    background-color: #ffffff;
     transform: scale(1.05); 
 	user-select: none;
 }
@@ -234,7 +233,7 @@ pre {
   animation: flicker1 7s infinite; /* Анимация мигания текста */
   display: flex;
   position: relative;
-  left: -30px;
+  right: -20px;
 }
 
 
@@ -295,14 +294,14 @@ From here */
 
 .flicker-text1 {
 
-    color: #ff0000;
+    color: #ffffff;
     animation: flicker1 2s infinite;
 }
 
 @keyframes brokenFlicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         opacity: 1;
-        text-shadow: 0 0 2px #8b0000, 0 0 4px #8b0000, 0 0 6px #8b0000;
+        text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff;
     }
     20%, 22%, 24%, 55% {
         opacity: 0.7;
@@ -310,14 +309,13 @@ From here */
     }
     26%, 53% {
         opacity: 0.85;
-        text-shadow: 0 0 1px #8b0000, 0 0 2px #8b0000, 0 0 3px #8b0000;
+        text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
     }
 }
 
 .flicker-text {
-
     color: #ff0000;
-    text-shadow: 0 0 2px #8b0000, 0 0 4px #8b0000, 0 0 6px #8b0000;
+    text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff;
     animation: brokenFlicker 3s infinite;
 }
 
@@ -325,7 +323,7 @@ From here */
 @keyframes brokenFlicker2 {
   0%, 20%, 22%, 29%, 35%, 76%, 81%, 100% {
         opacity: 1;
-        text-shadow: 0 0 2px #8b0000, 0 0 4px #8b0000, 0 0 6px #8b0000;
+        text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff;
 }
   15%, 25%, 29%, 58% {
         opacity: 0.7;
@@ -333,16 +331,14 @@ From here */
 }
   22%, 63% {
         opacity: 0.85;
-        text-shadow: 0 0 1px #8b0000, 0 0 2px #8b0000, 0 0 3px #8b0000;
+        text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
 }}
 
 .flicker-text2 {
-    color: #ff0000;
-    text-shadow: 0 0 2px #8b0000, 0 0 4px #8b0000, 0 0 6px #8b0000;
+    color: #ffffff;
+    text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff;
     animation: brokenFlicker2 0.01s infinite;
 }
-
-
 
 .hosted {
 	bottom:0px;
@@ -366,14 +362,14 @@ From here */
     #text p {
         font-size: 12px
     }
-        .pale-red span{
+    .pale-red span{
       width: 900px;
     }
     .pale-red span{
       width: 900px;
     }
     .ascii-logo {
-      font-size: 12px; /* Уменьшение размера логотипа на маленьких экранах */
+      font-size: 12px;
   }
 }
 

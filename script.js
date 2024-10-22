@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'NAW4DA': { 
             'name': 'NAWADA', 
             'image': './assets/NAWADA.png', 
-            'description': 'tattooed in reverse | <span style="color: red;">atori ❤</span>', 
+            'description': 'tattooed in reverse', 
             'track': './assets/NAWADA.mp3' 
         },
         'HADARI': { 
@@ -15,24 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'image': './assets/hadari.png', 
             'description': 'TYPESCRIPT/JAVASCRIPT, KALI LINUX KILLER.', 
             'track': './assets/HADARI.mp3' 
-        },
-        'DFGEAK': { 
-            'name': 'DFGEAK', 
-            'image': './assets/DANILO.png', 
-            'description': 'PYTHON KILLER. FAME.', 
-            'track': './assets/DFGEAK.mp3'
-        },
-        'KATANTIKA': {
-            'name': 'ATORI', 
-            'image': './assets/meow.png', 
-            'description': 'DESIGN KILLER! <span style="color: red;">nawada lox ❤</span>', 
-            'track': './assets/meow.mp3'
-        },
-        'LOLYAA': {
-            'name': 'LOLYACHKA',
-            'image': './assets/paranoia.png',
-            'description': 'i wnt to sleep zzZ..',
-            'track': './assets/paranoia.mp3'
         }
     };    
 
@@ -68,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         memberDiv.innerHTML = `
             <img src="${info.image}" class="fade-in" style="height: 120px;" draggable="false">
-            <p style="margin-top: 5px; margin-bottom: 0; color: #b90000;">[ ${info.name} ]</p>
-            <hr style="border-top: 1px solid #b90000; margin: 3px 0;">
+            <p style="margin-top: 5px; margin-bottom: 0; color: #ffffff;">[ ${info.name} ]</p>
+            <hr style="border-top: 1px solid #ffffff; margin: 3px 0;">
             <p class="glitch" style="margin-top: 5px;">${info.description}</p>
         `;
         
