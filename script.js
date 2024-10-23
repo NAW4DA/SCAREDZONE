@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         'NAW4DA': { 
             'name': 'NAWADA', 
             'image': './assets/NAWADA.png', 
-            'description': 'tattooed in reverse', 
+            'description': 'experience does not fail.', 
             'track': './assets/NAWADA.mp3' 
         },
         'HADARI': { 
             'name': 'HADARI', 
             'image': './assets/hadari.png', 
-            'description': 'TYPESCRIPT/JAVASCRIPT, KALI LINUX KILLER.', 
+            'description': 'how much does love cost?', 
             'track': './assets/HADARI.mp3' 
         }
     };    
