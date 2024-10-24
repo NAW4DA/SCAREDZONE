@@ -8,18 +8,19 @@
 */
 
 :root {
-	--pale-red: #ffffff;
-	--red: #ffffff;
-	--yellow: #ffffff;
-	--purple: #ffffff;
-	--grey: #c3c3c3;
-	--atts: #ffffff;
-	--hsted: #c3c3c3;
+	--pale-red: #ff4500; /* Ярко-оранжевый */
+	--red: #fff;      /* Оранжево-красный для динамичности */
+	--yellow: #ffcc00;   /* Желтый оттенок для свечей */
+	--purple: #4b0082;   /* Темно-фиолетовый для мистики */
+	--grey: #fff;     /* Темно-серый */
+	--atts: #ffcc00;     /* Темно-зеленый для атмосферы */
+	--hsted: #8b0000;    /* Темно-красный для запугивания */
 
-	--background: #000;
+	--background: #000000; /* Черный фон */
 
-	--hover-blue: #ffffff;
+	--hover-blue: #ffcc00; /* Желтый для яркого выделения */
 }
+
 
 body {
     -webkit-user-select: none; 
@@ -255,12 +256,12 @@ From here */
   
 @-webkit-keyframes flicker
 {
-  10% {opacity:0;}
-  9% {opacity:01;}
-  10% {opacity:.5;}
-  13% {opacity:02;}
-  20% {opacity:.5;}
-  25% {opacity:1;}
+  10% {opacity: 0;}
+  9% {opacity: 0.1;}
+  10% {opacity: 0.5;}
+  13% {opacity: 0.2;}
+  20% {opacity: 0.5;}
+  25% {opacity: 1;}
 }	
 /* To here */
 
@@ -406,3 +407,9 @@ From here */
   color: var(--red)
 }
 
+#bat{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
