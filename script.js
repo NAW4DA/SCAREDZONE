@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         'NAW4DA': { 
             'name': 'NAWADA', 
             'image': './assets/NAWADA.png', 
-            'description': 'experience does not fail.', 
+            'description': '<img id="bat" src="./assets/bat.png"> experience does not <u style="color: red">fail</u>. <img id="bat" src="./assets/bat.png">', 
             'track': './assets/NAWADA.mp3' 
         },
         'HADARI': { 
             'name': 'HADARI', 
             'image': './assets/hadari.png', 
-            'description': 'how much does love cost?', 
+            'description': '<img id="bat" src="./assets/bat.png"> how much does <u style="color: red">love</u> cost? <img id="bat" src="./assets/bat.png">', 
             'track': './assets/HADARI.mp3' 
         }
     };    
