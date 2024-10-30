@@ -7,16 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
         'NAW4DA': { 
             'name': 'NAWADA', 
             'image': './assets/NAWADA.png', 
-            'description': '<img id="bat" src="./assets/bat.png"> experience does not <u style="color: red">fail</u>. <img id="bat" src="./assets/bat.png">', 
+            'description': 'the devil soul will only cause you <u style="color: red;">pain.</u>', 
             'track': './assets/NAWADA.mp3' 
         },
         'HADARI': { 
             'name': 'HADARI', 
             'image': './assets/hadari.png', 
-            'description': '<img id="bat" src="./assets/bat.png"> how much does <u style="color: red">love</u> cost? <img id="bat" src="./assets/bat.png">', 
+            'description': 'how much does <u style="color: red">love</u> cost? ', 
             'track': './assets/HADARI.mp3' 
         }
-    };    
+    };
 
     function showMember(member) {
         const info = memberInfoData[member];
@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Function to remove the initial overlay on page load
     function removeOverlay() {
         const overlay = document.getElementById('overlay');
         if (overlay) {
@@ -97,6 +98,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Function to show the "coming soon" overlay
+    function showComingSoon() {
+        const comingSoonOverlay = document.getElementById('coming-soon-overlay');
+        if (comingSoonOverlay) {
+            comingSoonOverlay.style.display = 'flex';
+        }
+    }
+
+    // Function to hide the "coming soon" overlay
+    function hideComingSoon() {
+        const comingSoonOverlay = document.getElementById('coming-soon-overlay');
+        if (comingSoonOverlay) {
+            comingSoonOverlay.style.display = 'none';
+        }
+    }
+
+    // Expose functions to window for inline onclick attributes
     window.removeOverlay = removeOverlay;
     window.showMember = showMember;
+    window.showComingSoon = showComingSoon;
+    window.hideComingSoon = hideComingSoon;
 });
