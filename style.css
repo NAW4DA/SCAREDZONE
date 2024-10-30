@@ -8,19 +8,18 @@
 */
 
 :root {
-	--pale-red: #ff4500; /* Ярко-оранжевый */
-	--red: #fff;      /* Оранжево-красный для динамичности */
-	--yellow: #ffcc00;   /* Желтый оттенок для свечей */
-	--purple: #4b0082;   /* Темно-фиолетовый для мистики */
-	--grey: #fff;     /* Темно-серый */
-	--atts: #ffcc00;     /* Темно-зеленый для атмосферы */
-	--hsted: #8b0000;    /* Темно-красный для запугивания */
+	--pale-red: #ffffff;
+	--red: #ffffff;
+	--yellow: #ffffff;
+	--purple: #ffffff;
+	--grey: #c3c3c3;
+	--atts: #ffffff;
+	--hsted: #c3c3c3;
 
-	--background: #000000; /* Черный фон */
+	--background: #000;
 
-	--hover-blue: #ffcc00; /* Желтый для яркого выделения */
+	--hover-blue: #ffffff;
 }
-
 
 body {
     -webkit-user-select: none; 
@@ -70,8 +69,13 @@ body {
 }
 
 .pale-red {
-    color: var(--pale-red);
+  color: var(--pale-red);
 	user-select: none;
+}
+
+.linktelegram{
+  color: white;
+  user-select: none;
 }
 
  /* Change cursor to a custom image */
@@ -186,7 +190,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: var(--hover-blue)
+    color: red;
 }
 
 #text {
@@ -256,12 +260,12 @@ From here */
   
 @-webkit-keyframes flicker
 {
-  10% {opacity: 0;}
-  9% {opacity: 0.1;}
-  10% {opacity: 0.5;}
-  13% {opacity: 0.2;}
-  20% {opacity: 0.5;}
-  25% {opacity: 1;}
+  10% {opacity:0;}
+  9% {opacity:01;}
+  10% {opacity:.5;}
+  13% {opacity:02;}
+  20% {opacity:.5;}
+  25% {opacity:1;}
 }	
 /* To here */
 
@@ -407,9 +411,27 @@ From here */
   color: var(--red)
 }
 
-#bat{
-  position: relative;
-  width: 20px;
-  height: 20px;
-  margin: 0 auto;
+#coming-soon-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
+
+.coming-soon-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
