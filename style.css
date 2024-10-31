@@ -435,3 +435,9 @@ From here */
   gap: 30px;
 }
 
+#bat{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
