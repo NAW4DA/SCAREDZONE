@@ -104,7 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (comingSoonOverlay) {
             comingSoonOverlay.style.display = 'flex';
         }
+        playSound('error.mp3'); // Воспроизводим звук error.mp3 при активации "Coming Soon"
     }
+    
 
     // Function to hide the "coming soon" overlay
     function hideComingSoon() {
@@ -113,6 +115,18 @@ document.addEventListener('DOMContentLoaded', function() {
             comingSoonOverlay.style.display = 'none';
         }
     }
+
+    function playSound(soundFile) {
+        const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobileOrTablet) return;
+        const audio = new Audio(`./assets/sounds/${soundFile}`);
+        audio.play();
+    }
+    
+
+    document.addEventListener('mousedown', () => {
+        playSound('mouseclick.mp3');
+    });
 
     // Expose functions to window for inline onclick attributes
     window.removeOverlay = removeOverlay;
