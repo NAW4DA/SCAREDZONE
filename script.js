@@ -73,8 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
             audioPlayer.play();
         }
     }
-
-    // Function to remove the initial overlay on page load
+    
     function removeOverlay() {
         const overlay = document.getElementById('overlay');
         if (overlay) {
@@ -98,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to show the "coming soon" overlay
     function showComingSoon() {
         const comingSoonOverlay = document.getElementById('coming-soon-overlay');
         if (comingSoonOverlay) {
@@ -107,8 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         playSound('error.mp3'); // Воспроизводим звук error.mp3 при активации "Coming Soon"
     }
     
-
-    // Function to hide the "coming soon" overlay
     function hideComingSoon() {
         const comingSoonOverlay = document.getElementById('coming-soon-overlay');
         if (comingSoonOverlay) {
@@ -122,13 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const audio = new Audio(`./assets/sounds/${soundFile}`);
         audio.play();
     }
-    
 
-    document.addEventListener('mousedown', () => {
-        playSound('mouseclick.mp3');
-    });
-
-    // Expose functions to window for inline onclick attributes
     window.removeOverlay = removeOverlay;
     window.showMember = showMember;
     window.showComingSoon = showComingSoon;
