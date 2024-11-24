@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         'NAW4DA': { 
             'name': 'NAWADA', 
             'image': './assets/NAWADA.png', 
-            'description': 'the devil soul will only cause you <u style="color: red;">pain.</u>', 
+            'description': 'stop your aggression. <u style="color: red;">be kind.</u>', 
             'track': './assets/NAWADA.mp3' 
         },
-        'HADARI': { 
-            'name': 'HADARI', 
-            'image': './assets/hadari.png', 
-            'description': 'how much does <u style="color: red">love</u> cost? ', 
+        'KAWAIIOKA': { 
+            'name': 'KAWAYOKA', 
+            'image': './assets/katya.png', 
+            'description': '<img id="kittypawleft" src="../assets/paw.png"><span style="color: pink">meow meow meow meow meow</span><img id="kittypaw" src="../assets/paw.png">', 
             'track': './assets/HADARI.mp3' 
         }
     };
@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
             audioPlayer.play();
         }
     }
-    
+
+    // Function to remove the initial overlay on page load
     function removeOverlay() {
         const overlay = document.getElementById('overlay');
         if (overlay) {
@@ -97,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Function to show the "coming soon" overlay
     function showComingSoon() {
         const comingSoonOverlay = document.getElementById('coming-soon-overlay');
         if (comingSoonOverlay) {
@@ -105,6 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
         playSound('error.mp3'); // Воспроизводим звук error.mp3 при активации "Coming Soon"
     }
     
+
+    // Function to hide the "coming soon" overlay
     function hideComingSoon() {
         const comingSoonOverlay = document.getElementById('coming-soon-overlay');
         if (comingSoonOverlay) {
