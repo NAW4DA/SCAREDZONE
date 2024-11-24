@@ -441,3 +441,56 @@ From here */
   height: 20px;
   margin: 0 auto;
 }
+
+#kittypaw{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: 5.6px;
+}
+
+#kittypawleft{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -26.6px;
+}
+
+.blink3 {
+  color: #8b0000; /* Начальный тёмно-красный */
+  text-shadow: 0 0 5px #8b0000; /* Начальное свечение */
+  animation: flicker-text 30s infinite; /* Анимация текста */
+}
+
+@keyframes flicker-text {
+  0%, 100% {
+    opacity: 0; /* Текст исчезает */
+    color: #8b0000; /* Тёмно-красный */
+    text-shadow: 0 0 5px #8b0000;
+  }
+  10% {
+    opacity: 0.5; /* Полупрозрачный */
+    color: #ff0000; /* Яркий красный */
+    text-shadow: 0 0 10px #ff0000;
+  }
+  25% {
+    opacity: 1; /* Полностью видимый */
+    color: #ff0000; /* Интенсивно красный, кровавый */
+    text-shadow: 0 0 20px #ff0000;
+  }
+  50% {
+    opacity: 1; /* Полностью видимый */
+    color: #ff0000; /* Интенсивно красный, кровавый */
+    text-shadow: 0 0 20px #ff0000;
+  }
+  75% {
+    opacity: 0.7; /* Почти исчезает */
+    color: #660000; /* Очень тёмный красный */
+    text-shadow: 0 0 5px #660000;
+  }
+  90% {
+    opacity: 0; /* Текст исчезает */
+    color: #660000; /* Очень тёмный красный */
+    text-shadow: 0 0 5px #660000;
+  }
+}
