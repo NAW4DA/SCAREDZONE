@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'KAWAIIOKA': { 
             'name': 'KAWAYOKA', 
             'image': './assets/katya.png', 
-            'description': '<img id="kittypawleft" src="../assets/paw.png"><span style="color: pink">meow meow meow meow meow</span><img id="kittypaw" src="./assets/paw.png">', 
+            'description': '<img id="kittypawleft" src="./assets/paw.png"><span style="color: pink">meow meow meow meow meow</span><img id="kittypaw" src="./assets/paw.png">', 
             'track': './assets/HADARI.mp3' 
         }
     };
