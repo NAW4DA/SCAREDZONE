@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const donateInfo = document.getElementById('donation-info');
 
     const memberInfoData = {
-        'NAW4DA': { 
-            'name': 'NAWADA', 
+        'REAPER': { 
+            'name': 'THE REAPER', 
             'image': './assets/NAWADA.png', 
             'description': 'stop your aggression. <u style="color: red;">be kind.</u>', 
             'track': './assets/NAWADA.mp3' 
